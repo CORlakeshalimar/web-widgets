@@ -3,7 +3,8 @@ import { StaticCaptionsProvider } from "./StaticCaptionsProvider";
 import { FilterTypeEnum, OptionsSourceStaticDataSourceType } from "../../../typings/ComboboxProps";
 import { BaseOptionsProvider } from "../BaseOptionsProvider";
 import { Status } from "../types";
-
+// Modified by the City of Rochester, Shalimar.Lake@cityofrochester.gov November, 2026
+// added case for "manual" sorting, which returns the same as "none".
 interface Props {
     ds: OptionsSourceStaticDataSourceType[];
     filterType: FilterTypeEnum;
@@ -41,6 +42,12 @@ export class StaticOptionsProvider extends BaseOptionsProvider<string | Big | bo
             case "startsWith":
                 return matchSorter(this.options, this.searchTerm || "", {
                     threshold: matchSorter.rankings.WORD_STARTS_WITH,
+                    keys: [v => this.valuesMap.get(v)?.staticDataSourceCaption.value as string],
+                    sorter: option => option
+                });
+            case "manual":
+                return matchSorter(this.options, this.searchTerm || "", {
+                    threshold: matchSorter.rankings.NO_MATCH,
                     keys: [v => this.valuesMap.get(v)?.staticDataSourceCaption.value as string],
                     sorter: option => option
                 });

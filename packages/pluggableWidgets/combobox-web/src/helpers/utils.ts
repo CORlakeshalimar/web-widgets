@@ -5,6 +5,9 @@ import { createElement, PropsWithChildren, ReactElement } from "react";
 import { ComboboxPreviewProps, FilterTypeEnum, SelectedItemsSortingEnum } from "typings/ComboboxProps";
 import { MultiSelector, SortOrder } from "./types";
 
+// Modified by the City of Rochester, Shalimar.Lake@cityofrochester.gov November, 2026
+// Added case for "manual" sorting which matches "none"
+
 export const DEFAULT_LIMIT_SIZE = 100;
 
 type ValueType = string | Big | boolean | Date | undefined;
@@ -95,6 +98,10 @@ export function getFilterTypeOptions(filter: FilterTypeEnum): MatchSorterOptions
         case "startsWith":
             return {
                 threshold: matchSorter.rankings.WORD_STARTS_WITH
+            };
+        case "manual":
+            return {
+                threshold: matchSorter.rankings.NO_MATCH
             };
         case "none":
             return {

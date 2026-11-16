@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="com.mendix.widget.web.combobox.Combobox" pluginWidget="true" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>Combo box</name>
+<!-- Modified by the City of Rochester, Shalimar.Lake@cityofrochester.gov November, 2026
+    Added "manual" option to the filterType and updated widget-id to avoid clashes when adding to projects. -->
+<widget id="rochester.combobox.Combobox" pluginWidget="true" offlineCapable="true" xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Combo box with manual override</name>
     <description />
     <studioProCategory>Input elements</studioProCategory>
     <studioCategory>Display</studioCategory>
@@ -432,6 +434,7 @@
                         <enumerationValue key="contains">Contains (fuzzy)</enumerationValue>
                         <enumerationValue key="containsExact">Contains (exact)</enumerationValue>
                         <enumerationValue key="startsWith">Starts-with</enumerationValue>
+                        <enumerationValue key="manual">Manual (controlled by filter change event)</enumerationValue>
                         <enumerationValue key="none">None</enumerationValue>
                     </enumerationValues>
                 </property>

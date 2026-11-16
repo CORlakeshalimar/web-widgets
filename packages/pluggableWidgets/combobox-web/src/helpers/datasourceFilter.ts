@@ -3,12 +3,14 @@ import { FilterCondition } from "mendix/filters";
 import { attribute, contains, literal, startsWith } from "mendix/filters/builders";
 import { FilterTypeEnum } from "../../typings/ComboboxProps";
 
+// Modified by the City of Rochester, Shalimar.Lake@cityofrochester.gov November, 2026
+// Added "manual" to the conditions below.
 export function datasourceFilter(
     type: FilterTypeEnum,
     search: string,
     id: ListAttributeValue["id"]
 ): FilterCondition | undefined {
-    if (type === "none" || !search) {
+    if (type === "none" || type === "manual" || !search) {
         return undefined;
     }
 

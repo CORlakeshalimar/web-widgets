@@ -1,8 +1,8 @@
 {
-    "name": "@mendix/combobox-web",
+    "name": "@rochester/combobox-web",
     "widgetName": "Combobox",
     "version": "2.10.0",
-    "description": "Configurable Combo box widget with suggestions and autocomplete.",
+    "description": "Configurable Combo box widget with suggestions and autocomplete, modified by the City of Rochester team to add a non-filtering option that still allows for a filter string, for custom lookups.",
     "copyright": "© Mendix Technology BV 2025. All rights reserved.",
     "license": "Apache-2.0",
     "repository": {
@@ -16,20 +16,14 @@
     "mxpackage": {
         "name": "Combobox",
         "type": "widget",
-        "mpkName": "com.mendix.widget.web.Combobox.mpk"
+        "mpkName": "rochester.combobox.mpk"
     },
-    "packagePath": "com.mendix.widget.web",
+    "packagePath": "rochester",
     "marketplace": {
         "minimumMXVersion": "10.22.0",
         "appNumber": 219304,
-        "appName": "Combo box",
+        "appName": "CoR Combo box with manual override",
         "reactReady": true
-    },
-    "testProject": {
-        "githubUrl": "https://github.com/mendix/testProjects",
-        "branchName": "combobox-web-atlas4",
-        "atlasCoreVersion": "4.5.0",
-        "atlasThemeTag": "atlasui-theme-files-2025-10-08"
     },
     "scripts": {
         "prebuild": "rui-create-translation",

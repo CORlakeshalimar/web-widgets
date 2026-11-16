@@ -52,7 +52,7 @@ export type LoadingTypeEnum = "spinner" | "skeleton";
 
 export type SelectedItemsSortingEnum = "caption" | "none";
 
-export type FilterTypeEnum = "contains" | "containsExact" | "startsWith" | "none";
+export type FilterTypeEnum = "contains" | "containsExact" | "startsWith" | "manual" | "none";
 
 export interface OptionsSourceStaticDataSourcePreviewType {
     staticDataSourceValue: string;

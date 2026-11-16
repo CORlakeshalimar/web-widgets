@@ -44,6 +44,7 @@ export class StaticOptionsProvider extends BaseOptionsProvider<string | Big | bo
                     keys: [v => this.valuesMap.get(v)?.staticDataSourceCaption.value as string],
                     sorter: option => option
                 });
+            case "manual":
             case "none":
                 return matchSorter(this.options, this.searchTerm || "", {
                     threshold: matchSorter.rankings.NO_MATCH,

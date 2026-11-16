@@ -8,7 +8,7 @@ export function datasourceFilter(
     search: string,
     id: ListAttributeValue["id"]
 ): FilterCondition | undefined {
-    if (type === "none" || !search) {
+    if (type === "none" || type === "manual" || !search) {
         return undefined;
     }
 

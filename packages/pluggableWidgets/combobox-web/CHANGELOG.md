@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- We added a "Manual" filter type. The search input stays editable and the typed text is passed to the "On filter input change" action, but the combobox does not filter the options itself. This lets you apply your own filtering logic, for example in a microflow or nanoflow that updates the data source.
+
 ### Changed
 
 - We hid the "Placeholder text" property when the combobox type is set to Boolean, since boolean attributes can never be empty and the placeholder has no effect.

@@ -432,6 +432,7 @@
                         <enumerationValue key="contains">Contains (fuzzy)</enumerationValue>
                         <enumerationValue key="containsExact">Contains (exact)</enumerationValue>
                         <enumerationValue key="startsWith">Starts-with</enumerationValue>
+                        <enumerationValue key="manual">Manual (controlled by filter change event)</enumerationValue>
                         <enumerationValue key="none">None</enumerationValue>
                     </enumerationValues>
                 </property>

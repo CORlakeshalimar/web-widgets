@@ -12,8 +12,8 @@ describe("datasourceFilter", () => {
         (startsWith as jest.Mock).mockImplementation((a, b) => ({ startsWith: [a, b] }));
     });
 
-    it("returns undefined for filter type 'none'", () => {
-        expect(datasourceFilter("none", "ab", id)).toBeUndefined();
+    it.each(["none", "manual"] as const)("returns undefined for filter type '%s'", type => {
+        expect(datasourceFilter(type, "ab", id)).toBeUndefined();
     });
 
     it("returns undefined for an empty search", () => {

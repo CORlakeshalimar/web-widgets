@@ -96,6 +96,7 @@ export function getFilterTypeOptions(filter: FilterTypeEnum): MatchSorterOptions
             return {
                 threshold: matchSorter.rankings.WORD_STARTS_WITH
             };
+        case "manual":
         case "none":
             return {
                 threshold: matchSorter.rankings.NO_MATCH

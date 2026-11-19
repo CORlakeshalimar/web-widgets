@@ -11,7 +11,8 @@
     },
     "config": {
         "developmentPort": 3000,
-        "mendixHost": "http://localhost:8080"
+        "mendixHost": "http://localhost:8080",
+        "projectPath": "..\\..\\..\\..\\..\\..\\Mendix Projects\\COR_CustomModules-mendix-11"
     },
     "mxpackage": {
         "name": "Combobox",
